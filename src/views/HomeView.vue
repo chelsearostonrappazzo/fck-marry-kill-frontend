@@ -14,16 +14,7 @@
       </div>
     </div>
     <button v-on:click="this.showRound()">Another One</button>
-    <div class="row">
-      <figure
-        class="figure col-sm-1 center"
-        v-for="completedContestant in completedRounds"
-        v-bind:key="completedContestant.id"
-      >
-        <img v-bind:src="completedContestant.image" class="figure-img img-fluid rounded" />
-        <figcaption class="figure-caption">{{ completedContestant.name }}</figcaption>
-      </figure>
-    </div>
+    <button v-on:click="this.reset()">Reset Game</button>
   </div>
 </template>
 
@@ -34,12 +25,10 @@ export default {
   data: function () {
     return {
       currentRound: [],
-      completedRounds: [],
     };
   },
   mounted: function () {
     this.showRound();
-    this.completedContestants();
   },
   methods: {
     showRound: function () {
@@ -49,14 +38,8 @@ export default {
       });
     },
     reset: function () {
-      axios.get("/reset").then((response) => {
-        console.log(response.data);
-      });
-    },
-    completedContestants: function () {
-      axios.get("/completed-rounds").then((response) => {
-        this.completedRounds = response.data;
-        console.log(this.completedRounds);
+      axios.get("/reset").then(() => {
+        window.location.reload();
       });
     },
   },
