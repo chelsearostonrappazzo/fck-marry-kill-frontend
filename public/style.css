@@ -2,3 +2,9 @@
   margin: auto;
   padding: 10px;
 }
+
+.btn-primary {
+  background: pink !important;
+  border: pink;
+  display: block;
+}

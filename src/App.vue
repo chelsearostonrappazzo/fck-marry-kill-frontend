@@ -1,5 +1,7 @@
 <template>
   <nav>
+    <router-link to="/">Game</router-link>
+    |
     <router-link to="/completed">Completed Rounds</router-link>
   </nav>
   <router-view />
