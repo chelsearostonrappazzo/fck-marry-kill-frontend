@@ -1,21 +1,13 @@
 <template>
   <nav>
-    <router-link to="/">Game</router-link>
-    |
-    <router-link to="/completed">Completed Rounds</router-link>
+    <router-link to="/">game</router-link>
+    <!-- |
+    <router-link to="/completed">Completed Rounds</router-link> -->
   </nav>
   <router-view />
 </template>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
 nav {
   padding: 30px;
 }
