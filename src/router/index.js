@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
-// import CompletedRounds from "../views/CompletedRounds.vue";
+import MostLikely from "../views/MostLikely.vue";
+import FckMarryKill from "../views/FMK.vue";
 
 const routes = [
   {
@@ -8,11 +9,16 @@ const routes = [
     name: "home",
     component: HomeView,
   },
-  // {
-  //   path: "/completed:",
-  //   name: "completed",
-  //   component: CompletedRounds,
-  // },
+  {
+    path: "/mostlikely",
+    name: "mostlikely",
+    component: MostLikely,
+  },
+  {
+    path: "/fckmarrykill:",
+    name: "fckmarrykill",
+    component: FckMarryKill,
+  },
 ];
 
 const router = createRouter({

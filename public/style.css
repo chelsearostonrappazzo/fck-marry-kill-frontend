@@ -13,7 +13,6 @@
 
 #app {
   font-family: "Exo 2", sans-serif !important;
-  background-color: #feeeec;
   text-align: center;
 }
 
@@ -36,4 +35,9 @@ figure {
 .figure-caption {
   font-weight: bold;
   font-size: 30px;
+}
+
+.question-large {
+  font-size: 35px;
+  margin-bottom: 20px;
 }
