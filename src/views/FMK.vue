@@ -1,9 +1,9 @@
 <template>
   <div class="container home">
     <h1>
-      <span style="color: #b39eb5">f*ck</span>
+      <span style="color: #c3b1e1">f*ck</span>
       .
-      <span style="color: #3eb489">marry</span>
+      <span style="color: #c1e1c1">marry</span>
       .
       <span style="color: #a7c7e7">kill</span>
     </h1>

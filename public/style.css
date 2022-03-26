@@ -4,8 +4,8 @@
 }
 
 .btn-primary {
-  background: pink !important;
-  border: pink !important;
+  background: #f79ac0 !important;
+  border: #f79ac0 !important;
   display: block;
   margin: 5px;
   font-size: 24px !important;
@@ -14,18 +14,20 @@
 #app {
   font-family: "Exo 2", sans-serif !important;
   text-align: center;
+  color: #f79ac0;
 }
 
-h1 {
+h1,
+h3 {
   font-family: "Cute Font", cursive !important;
   font-size: 85px !important;
-  color: pink;
+  color: #f79ac0;
 }
 
 .start-game {
   margin-top: 15px;
   margin-bottom: 30px;
-  font-size: 40px !important;
+  font-size: 35px !important;
 }
 
 figure {
@@ -40,4 +42,31 @@ figure {
 .question-large {
   font-size: 35px;
   margin-bottom: 20px;
+}
+
+#app,
+html {
+  background-color: #fff1fa;
+}
+
+nav {
+  padding: 30px;
+}
+
+nav a {
+  font-weight: bold;
+  color: #f79ac0;
+}
+
+nav a.router-link-exact-active {
+  color: #c1e1c1;
+}
+
+li {
+  text-align: left;
+  color: #a7c7e7;
+}
+
+h3 {
+  color: #c3b1e1;
 }
