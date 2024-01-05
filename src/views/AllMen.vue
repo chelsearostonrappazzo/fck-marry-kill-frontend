@@ -1,12 +1,5 @@
 <template>
   <div class="container home">
-    <h1>
-      <span style="color: #c3b1e1">f*ck</span>
-      .
-      <span style="color: #c1e1c1">marry</span>
-      .
-      <span style="color: #a7c7e7">kill</span>
-    </h1>
     <button
       class="btn btn-primary start-game"
       v-show="!startGame"
@@ -15,10 +8,10 @@
       let's go, girls!
     </button>
     <div class="row" v-show="startGame">
-      <div v-if="this.currentRound.length > 0">
+      <div v-if="this.allMen.length > 0">
         <figure
           class="figure col-md-3 center"
-          v-for="contestant in currentRound"
+          v-for="contestant in allMen"
           v-bind:key="contestant.id"
         >
           <img
@@ -28,10 +21,7 @@
           <figcaption class="figure-caption">{{ contestant.name }}</figcaption>
         </figure>
         <div class="row justify-content-center">
-          <button
-            class="btn btn-primary col-sm-2"
-            v-on:click="this.showRound()"
-          >
+          <button class="btn btn-primary col-sm-2" v-on:click="this.indexMen()">
             another one
           </button>
           <button class="btn btn-primary col-sm-2" v-on:click="this.reset()">
@@ -55,18 +45,18 @@ import axios from "axios";
 export default {
   data: function () {
     return {
-      currentRound: [],
+      allMen: [],
       startGame: false,
     };
   },
   mounted: function () {
-    this.showRound();
+    this.indexMen();
   },
   methods: {
-    showRound: function () {
-      axios.get("/current-round").then((response) => {
-        this.currentRound = response.data;
-        console.log(this.currentRound);
+    indexMen: function () {
+      axios.get("/top-round").then((response) => {
+        this.allMen = response.data;
+        console.log(this.allMen);
       });
     },
     reset: function () {

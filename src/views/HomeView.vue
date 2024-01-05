@@ -6,7 +6,10 @@
         <h3>f*ck, marry, kill</h3>
         <ol>
           <li>click the button to start the game.</li>
-          <li>decide which contestant you would f*ck, who you would marry and who you would unalive.</li>
+          <li>
+            decide which contestant you would f*ck, who you would marry and who
+            you would unalive.
+          </li>
           <li>outrage and discussion is encouraged.</li>
           <li>if you agree, ~drink~.</li>
         </ol>

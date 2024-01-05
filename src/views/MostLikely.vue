@@ -6,7 +6,12 @@
       <span style="color: #c3b1e1">to</span>
       <span style="color: #f79ac0">{{ currentQuestion.content }}</span>
     </div>
-    <button class="row btn btn-primary col-sm-2" v-on:click="this.showQuestion()">next</button>
+    <button
+      class="row btn btn-primary col-sm-2"
+      v-on:click="this.showQuestion()"
+    >
+      next
+    </button>
   </div>
 </template>
 
